@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cloudText" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DsO-Ir-u42">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type your message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZd-Ob-Nsb">
+                                <rect key="frame" x="20" y="40" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ARz-hJ-0sR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="TypeInField:" destination="BYZ-38-t0r" eventType="editingChanged" id="Sj0-2K-pb8"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCO-Am-RDs">
+                                <rect key="frame" x="147" y="80" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="X0x-aL-92D"/>
+                                    <constraint firstAttribute="width" constant="80" id="XU1-Jm-UXl"/>
+                                </constraints>
+                                <state key="normal" title="send"/>
+                                <connections>
+                                    <action selector="sendText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fnr-yW-Kl5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DsO-Ir-u42" secondAttribute="trailing" id="77W-cW-QPy"/>
+                            <constraint firstItem="xCO-Am-RDs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FZx-5B-bDo"/>
+                            <constraint firstItem="DsO-Ir-u42" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IbI-4Z-Qc4"/>
+                            <constraint firstItem="xCO-Am-RDs" firstAttribute="top" secondItem="pZd-Ob-Nsb" secondAttribute="bottom" constant="10" id="LG6-X9-k2s"/>
+                            <constraint firstItem="DsO-Ir-u42" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wdi-1U-FBG"/>
+                            <constraint firstItem="pZd-Ob-Nsb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ihx-pD-QAe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pZd-Ob-Nsb" secondAttribute="trailing" constant="20" id="rX7-FS-yuz"/>
+                            <constraint firstItem="pZd-Ob-Nsb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sim-fc-OqR"/>
+                            <constraint firstItem="DsO-Ir-u42" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w3z-ou-h9D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="SceneView" destination="DsO-Ir-u42" id="dpu-zR-giZ"/>
+                        <outlet property="UIFieldName" destination="pZd-Ob-Nsb" id="5pI-Nj-lZn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
